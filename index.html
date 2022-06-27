@@ -30,11 +30,11 @@
 
         </nav>
         <!-- /Header -->
-
+        <button @click="search">aaa</button>
         <!-- Select search -->
         <div class="container mt-3">
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                <option selected value="">Seleccione un electrodoméstico</option>
+            <select v-model="i_search" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected value="0">Seleccione un electrodoméstico</option>
                 <option value="1">Televisor</option>
                 <option value="2">Freidora</option>
                 <option value="3">lavadora</option>
@@ -64,7 +64,7 @@
                                 <img :src="item.img" class="card-img-top" alt="img">
                             </div>
                             <div class="card-body  text-center">
-                                <h5 class="card-title">televisor LG</h5>
+                                <h5 class="card-title">{{item.name}}</h5>
                                 <div class="container-fluid mb-2">
                                     <div class="row">
                                         <div class="col text-center">
@@ -94,7 +94,7 @@
                                 <img :src="item.img" class="card-img-top" alt="img">
                             </div>
                             <div class="card-body  text-center">
-                                <h5 class="card-title">televisor LG</h5>
+                                <h5 class="card-title">{{item.name}}</h5>
                                 <div class="container-fluid mb-2">
                                     <div class="row">
                                         <div class="col text-center">
@@ -124,7 +124,7 @@
                                 <img :src="item.img" class="card-img-top" alt="img">
                             </div>
                             <div class="card-body  text-center">
-                                <h5 class="card-title">televisor LG</h5>
+                                <h5 class="card-title">{{item.name}}</h5>
                                 <div class="container-fluid mb-2">
                                     <div class="row">
                                         <div class="col text-center">
@@ -154,7 +154,7 @@
                                 <img :src="item.img" class="card-img-top" alt="img">
                             </div>
                             <div class="card-body  text-center">
-                                <h5 class="card-title">televisor LG</h5>
+                                <h5 class="card-title">{{item.name}}</h5>
                                 <div class="container-fluid mb-2">
                                     <div class="row">
                                         <div class="col text-center">

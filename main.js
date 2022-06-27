@@ -5,7 +5,7 @@ let app = new Vue({
             {
                 tv: [
                     { id: 1, name: 'LG 3000', price: 1600000, img: 'assets/televisor1.jpg' },
-                    { id: 2, name: 'SAMSUNG', price: 1900000, img: 'assets/televisor2.jpg' }
+                    { id: 2, name: 'SAMSUNG 450', price: 1900000, img: 'assets/televisor2.jpg' }
                 ],
                 fryer: [
                     { id: 1, name: 'IMUSA 4.2', price: 450000, img: 'assets/freidora1.jpg' },
@@ -21,7 +21,25 @@ let app = new Vue({
                 ]
 
             }
-        ]
+        ],
+        i_search: 0,
+    },
+    methods: {
+        search(){
+            let dp;
+            if(this.i_search == 1){
+                this.dataProducts.forEach(Element =>{
+                    console(`${Element.tv}`)
+                })
+            } else if(this.i_search == 2){
+                dp = this.dataProducts[1].map();
+            } else if(this.i_search == 3){
+                dp = this.dataProducts[2].map();
+            } else if(this.i_search == 4){
+                dp = this.dataProducts[3].map();
+            }
+            
+        }
     }
 
 })
